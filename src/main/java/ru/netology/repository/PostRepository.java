@@ -1,16 +1,19 @@
 package ru.netology.repository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
+import org.springframework.stereotype.Repository;
+
 
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PostRepository {
+  @Autowired
   private static final ConcurrentHashMap<Long, Post> posts = new ConcurrentHashMap<>();
   private static final AtomicLong counter = new AtomicLong(0);
 
