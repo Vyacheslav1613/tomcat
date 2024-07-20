@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.List;
 
+@Repository
 public class PostRepository {
   @Autowired
   private static final ConcurrentHashMap<Long, Post> posts = new ConcurrentHashMap<>();
